@@ -17,14 +17,16 @@ package com.brophy.common.samplerender.arcore;
 
 import android.opengl.Matrix;
 
+import com.brophy.common.samplerender.IndexBuffer;
+import com.brophy.common.samplerender.Mesh;
+import com.brophy.common.samplerender.SampleRender;
+import com.brophy.common.samplerender.Shader;
+import com.brophy.common.samplerender.Texture;
+import com.brophy.common.samplerender.VertexBuffer;
 import com.google.ar.core.Camera;
 import com.google.ar.core.Plane;
 import com.google.ar.core.Pose;
 import com.google.ar.core.TrackingState;
-import com.google.ar.core.examples.java.common.samplerender.Shader;
-import com.google.ar.core.examples.java.common.samplerender.Shader.BlendFactor;
-import com.google.ar.core.examples.java.common.samplerender.Texture;
-import com.google.ar.core.examples.java.common.samplerender.VertexBuffer;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -115,10 +117,10 @@ public class PlaneRenderer {
             .setTexture("u_Texture", texture)
             .setVec4("u_GridControl", GRID_CONTROL)
             .setBlend(
-                BlendFactor.DST_ALPHA, // RGB (src)
-                BlendFactor.ONE, // RGB (dest)
-                BlendFactor.ZERO, // ALPHA (src)
-                BlendFactor.ONE_MINUS_SRC_ALPHA) // ALPHA (dest)
+                Shader.BlendFactor.DST_ALPHA, // RGB (src)
+                Shader.BlendFactor.ONE, // RGB (dest)
+                Shader.BlendFactor.ZERO, // ALPHA (src)
+                Shader.BlendFactor.ONE_MINUS_SRC_ALPHA) // ALPHA (dest)
             .setDepthWrite(false);
 
     indexBufferObject = new IndexBuffer(render, /*entries=*/ null);

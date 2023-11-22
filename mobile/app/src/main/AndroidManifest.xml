@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.google.ar.core.examples.java.helloar">
+    xmlns:tools="http://schemas.android.com/tools">
 
   <uses-permission android:name="android.permission.CAMERA"/>
   <!-- Limits app visibility in the Google Play Store to ARCore supported devices
        (https://developers.google.com/ar/devices). -->
   <uses-feature android:name="android.hardware.camera.ar" android:required="true"/>
   <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+  <uses-feature
+      android:name="android.hardware.camera"
+      android:required="false" />
 
   <application
       android:allowBackup="false"
@@ -19,7 +21,7 @@
       tools:ignore="GoogleAppIndexingWarning">
 
     <activity
-        android:name="com."
+        android:name="com.brophy.helloar.HelloArActivity"
         android:configChanges="orientation|screenSize"
         android:exported="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"

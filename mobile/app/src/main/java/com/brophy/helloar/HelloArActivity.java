@@ -30,17 +30,20 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.brophy.common.helpers.CameraPermissionHelper;
 import com.brophy.common.helpers.DepthSettings;
 import com.brophy.common.helpers.DisplayRotationHelper;
+import com.brophy.common.helpers.FullScreenHelper;
 import com.brophy.common.helpers.InstantPlacementSettings;
 import com.brophy.common.helpers.SnackbarHelper;
 import com.brophy.common.helpers.TapHelper;
 import com.brophy.common.helpers.TrackingStateHelper;
 import com.brophy.common.samplerender.Framebuffer;
+import com.brophy.common.samplerender.GLError;
 import com.brophy.common.samplerender.Mesh;
 import com.brophy.common.samplerender.SampleRender;
 import com.brophy.common.samplerender.Shader;
@@ -76,6 +79,7 @@ import com.google.ar.core.exceptions.UnavailableArcoreNotInstalledException;
 import com.google.ar.core.exceptions.UnavailableDeviceNotCompatibleException;
 import com.google.ar.core.exceptions.UnavailableSdkTooOldException;
 import com.google.ar.core.exceptions.UnavailableUserDeclinedInstallationException;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
