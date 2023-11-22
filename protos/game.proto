@@ -2,7 +2,7 @@ syntax = "proto3";
 
 option java_multiple_files = true;
 option java_package = "com.brophy.protocol";
-option go_package = "github.com/bpatel85/learn-arcore/packages/go";
+option go_package = "github.com/bpatel85/learn-arcore/server/pb";
 
 package game;
 
