@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.brophy.protocol";
+option go_package = "github.com/bpatel85/learn-arcore/packages/go";
+
+package game;
+
+message LoadGameRequest {
+    string name = 1;
+    string gameId = 2;
+}
+
+message LoadGameResponse {
+    string gameId = 1;
+    string instanceId = 2;
+}
+
+service Game {
+    rpc LoadGame(LoadGameRequest) returns (LoadGameResponse) {}
+}
