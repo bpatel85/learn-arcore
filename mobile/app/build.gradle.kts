@@ -2,8 +2,6 @@ plugins {
     id("com.android.application")
 }
 
-
-
 android {
     namespace = "com.brophy.mobile"
     compileSdk = 34
@@ -37,6 +35,8 @@ dependencies {
     implementation("de.javagl:obj:0.4.0")
     implementation("androidx.appcompat:appcompat:1.1.0")
     implementation("com.google.android.material:material:1.1.0")
+    implementation("io.grpc:grpc-protobuf:1.59.0")
+    implementation("io.grpc:grpc-stub:1.59.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
